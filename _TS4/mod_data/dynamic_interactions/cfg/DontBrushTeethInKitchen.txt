@@ -1,0 +1,42 @@
+{
+    'DontBrushTeethInKitchen_with_Fridge': {
+        'objects': {
+            'tags': (1313, ),  # CommonGameTag.FUNC_SINK
+            'names': ('object_sink', ),  # usually not needed
+        },
+        'remove_interactions': (14238, 14241, 251571, 286282, 286283, ),
+        # 'sink_BrushTeeth (14238)',
+        # 'sink_washHands (14241)',
+        # 'simPicker_cleanUpToddler (251571)',
+        # 'sink_PubertyChanges_Acne_Cleanser (286282)',
+        # 'sink_PubertyChanges_Acne_Concealer (286283)',
+        'filter': {
+            'invert': False,  # False: Apply interactions and tags if filter matches. True: Apply interactions and tags if filter doesn't match.
+            'world_ids': None,  # and
+            'lot_ids': None,  # and
+            'same_block': True,  # and (requires 'objects' to be in the same room, otherwise objects can be anywhere on lot to match)
+            'objects': {
+                'tags': (1002, ),  # CommonGameTag.FUNC_FRIDGE
+            }
+        }
+    },
+    'DontBrushTeethInKitchen_with_Oven': {
+        'objects': {
+            'tags': (1313, ),  # CommonGameTag.FUNC_SINK
+            'names': ('object_sink', ),  # usually not needed
+        },
+        'remove_interactions': (14238, 14241, 251571, 286282, 286283, ),
+        'filter': {
+            'invert': False,  # False: Apply interactions and tags if filter matches. True: Apply interactions and tags if filter doesn't match.
+            'world_ids': None,  # and
+            'lot_ids': None,  # and
+            'same_block': True,  # and (requires 'objects' to be in the same room, otherwise objects can be anywhere on lot to match)
+            'objects': {
+                'tags': (748, ),  # CommonGameTag.FUNC_OVEN
+            }
+        }
+    },
+}
+
+# Currently neither interaction names nor CommonGameTag names are supported.
+# CommonGameTag values: https://github.com/ColonolNutty/Sims4CommunityLibrary/blob/master/Scripts/sims4communitylib/enums/tags_enum.py

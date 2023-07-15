@@ -1,0 +1,38 @@
+{
+    'Simple_Your_unique_ID_or_description': {  # Really a simple example!
+        'objects': {
+            'tags': (1234, ),  # All object IDs which shall be modified. Keep the ',' at the end of the IDs.
+            'names': ('object_ping', 'object_pong', ),  # Object names to add. NOT needed for properly tagged objects!
+        },
+        'add_interactions': (111, 222, 333, ),  # All interactions to be added. Keep the ',' at the end of the IDs.
+        'remove_interactions': (444, 555, 666, ),  # All interactions to be removed. Keep the ',' at the end of the IDs.
+    },
+
+    'Filter_Your_unique_ID_or_description': {  # As above, but with a filter. The filter must be 'True', otherwise nothing is modified.
+        'objects': {
+            'tags': (1234, ),
+            'names': ('object_ping', 'object_pong', ),
+        },
+        'add_interactions': (111, 222, 333, ),
+        'remove_interactions': (444, 555, 666, ),
+        'filter': {  # All filter options are joined with '&'. To skip a filter set the value to None.
+                    # For '|' copy the ID/description and specify another filter.
+            'invert': False,  # False: Apply interactions and tags if filter matches. True: Apply interactions and tags if filter doesn't match.
+
+            # It is often enough to specify only one of the 4 possible IDs and set the others to None.
+            # See README_* for the IDs.
+            # Each 'lot' gets a random unique ID. They are unique for a save game.
+            'venue_ids': None,  # Use `(123, )` to limit it to the venue `123` - Generic ID to match a venue type
+            'region_ids': None,  # Use `(123, )` to limit it to the region `123`  - Generic ID to match a region type
+            'world_ids': None,  # Use `(123, )` to limit it to the world `123` - Specific ID to match a neighbourhood
+            'lot_ids': None,  # Use `(123, )` to limit it to the lot `123` - The most specific ID.
+            'same_block': True,  # True requires 'objects' to be in the same room. None / False means the objects must exist on the lot.
+            'objects': {
+                'tags': (9876, ),  # All object IDs which should exist.
+                'names': ('object_ding', 'object_dong', ),  # Object names which should exist. NOT needed for properly tagged objects!
+            }
+        }
+    },
+}
+# Currently neither interaction names nor CommonGameTag names are supported.
+# CommonGameTag values: https://github.com/ColonolNutty/Sims4CommunityLibrary/blob/master/Scripts/sims4communitylib/enums/tags_enum.py

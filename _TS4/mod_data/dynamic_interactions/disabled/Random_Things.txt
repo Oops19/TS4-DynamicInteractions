@@ -1,0 +1,16 @@
+{
+    'RandomThings': {
+        'objects': {
+            'tags': (1313, ),  # CommonGameTag.FUNC_SINK
+        },
+        'add_interactions': (13603, 14426, 13635, ),  # mirror_AdmireSelf, toilet-flush, mirror_Speech,
+    },
+    'RandomThings2': {
+        'objects': {
+            'tags': (1881, ),  # CommonGameTag.FUNC_TOILET
+        },
+        'add_interactions': (13603, 33623, 14241, 239840, ),  # mirror_AdmireSelf, view, wash-hands, rummage
+    },
+}
+# Currently neither interaction names nor CommonGameTag names are supported.
+# CommonGameTag values: https://github.com/ColonolNutty/Sims4CommunityLibrary/blob/master/Scripts/sims4communitylib/enums/tags_enum.py

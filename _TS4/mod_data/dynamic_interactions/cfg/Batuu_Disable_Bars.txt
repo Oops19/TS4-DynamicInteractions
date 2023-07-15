@@ -1,0 +1,16 @@
+{
+    'Batuu_Disable_Bars': {
+        'objects': {
+            'names': ('object_barProC2x1_01', 'object_bar', ),  # straight 2x and 3x bar
+        },
+        'remove_interactions': (
+            13426, 123718, 146861,  # generic_BarMakeDrink object_HireNPC_Bartender object_HireNPC_Bartender_Restaurant
+            13021, 134499, 160819, 178403, 127073, 13022, 13023, 13024, 13025, 13033, 123583, 123582, 123354, 236462, 13059, 13060, 74970, 37408, 37415, 123626, 124007, 75079, 158987, 13061, 108957, 26503, 13063, 122195, 123722, ),  # bar*
+        'filter': {
+            'world_ids': (1573360963, ),  # 'Batuu', 'Black Spire Outpost'
+            'objects': {
+                'names': ('object_bar_Curve', ),  # Make sure that there is at least one round bar
+            }
+        }
+    }
+}

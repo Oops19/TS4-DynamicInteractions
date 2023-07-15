@@ -1,0 +1,12 @@
+{
+    'Batuu_View_Bars': {
+        'objects': {
+            'names': ('object_barProC2x1_01', 'object_bar', ),  # straight 2x and 3x bar
+        },
+        'add_interactions': (33623, ),  # art_View
+        'filter': {
+            'world_ids': (1573360963, ),  # 'Batuu', 'Black Spire Outpost'
+
+        }
+    }
+}

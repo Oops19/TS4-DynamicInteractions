@@ -1,0 +1,32 @@
+{
+    'DontWashDishesWhereYouAngryPoop_in_public_bathrooms': {
+        'objects': {
+            'tags': (1340, ),  # CommonGameTag.FUNC_PUBLIC_BATHROOM
+        },
+        'remove_interactions': (74885, 100109, 14240, 100104, 212219, 14242, 212221, ),  # sink_washDish*, sink_washSingleDish*
+    },
+    'DontWashDishesWhereYouAngryPoop_in_bathroom': {
+        'objects': {
+            'tags': (1313, ),  # CommonGameTag.FUNC_SINK
+            'names': ('object_sink', ),  # usually not needed
+        },
+        'remove_interactions': (74885, 100109, 14240, 100104, 212219, 14242, 212221, ),  # sink_washDish*, sink_washSingleDish*
+        'filter': {
+            'invert': False,  # False: Apply interactions and tags if filter matches. True: Apply interactions and tags if filter doesn't match.
+            'same_block': True,  # and (requires 'objects' to be in the same room, otherwise objects can be anywhere on lot to match)
+            'objects': {
+                'tags': (1881, ),  # CommonGameTag.FUNC_TOILET
+                'names': ('object_toilet', ),  # usually not needed
+            }
+        }
+    },
+    # If detection of the room failed one can restore the interactions for specific objects
+    # 'DWDWYAP_Restore_object_sinkPedSP03BRUSHED_01': {
+    #     'objects': {
+    #         'names': ('object_sinkPedSP03BRUSHED_01', ),  # A sink which is mounted in a counter, very likely not used in bathrooms
+    #     },
+    #     'add_interactions': (74885, 100109, 14240, 100104, 212219, 14242, 212221, ),  # sink_washDish*, sink_washSingleDish*
+    # },
+}
+# Currently neither interaction names nor CommonGameTag names are supported.
+# CommonGameTag values: https://github.com/ColonolNutty/Sims4CommunityLibrary/blob/master/Scripts/sims4communitylib/enums/tags_enum.py
