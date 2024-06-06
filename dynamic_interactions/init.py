@@ -15,11 +15,11 @@ from sims4communitylib.events.event_handling.common_event_registry import Common
 from sims4communitylib.events.zone_spin.events.zone_late_load import S4CLZoneLateLoadEvent
 from ts4lib.libraries.ts4folders import TS4Folders
 from ts4lib.utils.singleton import Singleton
-from sims4communitylib.utils.common_log_registry import CommonLog
+from sims4communitylib.utils.common_log_registry import CommonLog, CommonLogRegistry
 
 
 mod_name = ModInfo.get_identity().name
-log: CommonLog = CommonLog(f"{ModInfo.get_identity().name}", ModInfo.get_identity().name, custom_file_path=None)
+log: CommonLog = CommonLogRegistry.get().register_log(ModInfo.get_identity(), ModInfo.get_identity().name, custom_file_path=None)
 log.enable()
 log.info(f"Thank you for using Dynamic Interactions!")
 

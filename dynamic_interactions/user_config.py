@@ -17,11 +17,11 @@ from dynamic_interactions.modinfo import ModInfo
 from server_commands.object_commands import _all_objects_gen
 from ts4lib.libraries.file_utils import FileUtils
 from ts4lib.libraries.ts4folders import TS4Folders
-from sims4communitylib.utils.common_log_registry import CommonLog
+from sims4communitylib.utils.common_log_registry import CommonLog, CommonLogRegistry
 from ts4lib.utils.singleton import Singleton
 
 mod_name = ModInfo.get_identity().name
-log: CommonLog = CommonLog(f"{ModInfo.get_identity().name}", ModInfo.get_identity().name, custom_file_path=None)
+log: CommonLog = CommonLogRegistry.get().register_log(ModInfo.get_identity(), ModInfo.get_identity().name, custom_file_path=None)
 log.enable()
 
 

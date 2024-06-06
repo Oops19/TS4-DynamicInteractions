@@ -14,11 +14,12 @@ from sims4.math import Vector3, Quaternion, Transform, Location
 import services
 from dynamic_interactions.modinfo import ModInfo
 from sims4communitylib.utils.location.common_location_utils import CommonLocationUtils
-from sims4communitylib.utils.common_log_registry import CommonLog
+from sims4communitylib.utils.common_log_registry import CommonLog, CommonLogRegistry
 from ts4lib.utils.singleton import Singleton
 
+
 mod_name = ModInfo.get_identity().name
-log: CommonLog = CommonLog(f"{ModInfo.get_identity().name}", ModInfo.get_identity().name, custom_file_path=None)
+log: CommonLog = CommonLogRegistry.get().register_log(ModInfo.get_identity(), ModInfo.get_identity().name, custom_file_path=None)
 log.enable()
 
 

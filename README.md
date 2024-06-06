@@ -23,6 +23,8 @@ With no interaction sim's will not use such objects.
 That's what this mod does when reading the 'DontWashDishesWhereYouAngryPoop.txt' file.
 It looks for sinks and if a toilet is in the same room then some interactions will be removed from the sink.
 
+In December 2023 EA added the 'Set Sink Type ...' interaction to all sinks so one can manage this manually.
+
 ## Don't Brush Your Teeth in Kitchen
 Basically a clone of the configuration file to 'DontBrushTeethInKitchen.txt'.
 As soon as a `Fridge` or `Oven` is in the room a few interactions which are not appropriate for the kitchen will be removed.
@@ -68,13 +70,15 @@ All these things are not yet implemented. I'm not sure if I will ever add them.
 # Addendum
 
 ## Game compatibility
-This mod has been tested with `The Sims 4` 1.98.158 (2023-06), S4CL 2.7 (2023-06), TS4Lib 0.0.24 (2023-06).
+This mod has been tested with `The Sims 4` 1.107.112, S4CL 3.4, TS4Lib 0.3.20 (2024-05).
 It is expected to be compatible with many upcoming releases of TS4, S4CL and TS4Lib.
 
 ## Dependencies
-* [The Sims 4](https://www.ea.com/games/the-sims/the-sims-4)
+Download the ZIP file, not the sources.
+* [This Mod](../../releases/latest)
+* [TS4-Library](https://github.com/Oops19/TS4-Library/releases/latest)
 * [S4CL](https://github.com/ColonolNutty/Sims4CommunityLibrary/releases/latest)
-* [TS4Lib](https://github.com/Oops19/TS4-Library/releases/latest)
+* [The Sims 4](https://www.ea.com/games/the-sims/the-sims-4)
 
 If not installed download and install TS4 and these mods.
 All are available for free.
@@ -102,7 +106,7 @@ Some log entries in the log file ('mod_logs' folder) may contain the local usern
 [Donations](https://www.patreon.com/o19)
 
 ## Copyright and License
-* © 2023 [Oops19](https://github.com/Oops19)
+* © 2024 [Oops19](https://github.com/Oops19)
 * License for '.package' files: [Electronic Arts TOS for UGC](https://tos.ea.com/legalapp/WEBTERMS/US/en/PC/)  
 * License for other media unless specified differently: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) unless the Electronic Arts TOS for UGC overrides it.
 This allows you to use this mod and re-use the code even if you don't own The Sims 4.
