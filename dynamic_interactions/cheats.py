@@ -16,9 +16,8 @@ from sims4communitylib.services.commands.common_console_command_output import Co
 from sims4communitylib.utils.location.common_location_utils import CommonLocationUtils
 from sims4communitylib.utils.sims.common_sim_utils import CommonSimUtils
 from sims4communitylib.utils.common_log_registry import CommonLog, CommonLogRegistry
-from ts4lib.common_enums.vanilla_regions import VanillaRegions
-from ts4lib.common_enums.vanilla_venues import VanillaVenues
-from ts4lib.utils.vanilla_names import VanillaNames
+from ts4lib.enums.vanilla_regions import VanillaRegions
+from ts4lib.enums.vanilla_venues import VanillaVenues
 from ts4lib.utils.worlds_and_neighbourhoods import WorldsAndNeighbourhoods
 
 mod_name = ModInfo.get_identity().name
@@ -49,15 +48,15 @@ class Cheats:
             log.debug(f"World/NH (id): {w} >> {n} ({world_id})")
 
             region_id = getattr(services.current_region(), 'guid64', 0)
-            output(f"Region: {VanillaRegions(region_id)})")
-            log.debug(f"Region: {VanillaRegions(region_id)})")
+            output(f"Region: {VanillaRegions().name(region_id)})")
+            log.debug(f"Region: {VanillaRegions().name(region_id)})")
             # r = VanillaNames.get(VanillaRegions(region_id))
             # output(f"{r} ({region_id})")
             # log.debug(f"{r} ({region_id})")
 
             venue_id = getattr(services.get_current_venue(), 'guid64', 0)
-            output(f"Venue: {VanillaVenues(region_id)})")
-            log.debug(f"Venue: {VanillaVenues(region_id)})")
+            output(f"Venue: {VanillaVenues().name(venue_id)})")
+            log.debug(f"Venue: {VanillaVenues().name(venue_id)})")
             # r = VanillaNames.get(VanillaVenues(venue_id))
             # output(f"{r} ({venue_id})")
             # log.debug(f"{r} ({venue_id})")
