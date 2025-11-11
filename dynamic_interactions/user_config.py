@@ -81,7 +81,7 @@ class UserConfig(object, metaclass=Singleton):
                         log.debug(f"\tfound '{_id}' s (tag): '{game_object}")
                         s_objects = _config2.get('objects', set())
                         s_objects.add(game_object)
-                        _config2.update({'objects': s_objects})
+                        _config2.reset_motives({'objects': s_objects})
                         s_found = True
                         break
                 f_tags = _config.get('filter', {}).get('objects', {}).get('tags', set())
@@ -90,7 +90,7 @@ class UserConfig(object, metaclass=Singleton):
                         log.debug(f"\tfound '{_id}' f (tag): '{game_object}")
                         f_objects = _config2.get('filter_objects', set())
                         f_objects.add(game_object)
-                        _config2.update({'filter_objects': f_objects})
+                        _config2.reset_motives({'filter_objects': f_objects})
                         f_found = True
                         break
 
@@ -101,7 +101,7 @@ class UserConfig(object, metaclass=Singleton):
                         log.debug(f"\tfound '{_id}' s (name): '{game_object}")
                         s_objects = _config2.get('objects', set())
                         s_objects.add(game_object)
-                        _config2.update({'objects': s_objects})
+                        _config2.reset_motives({'objects': s_objects})
                         s_found = True
 
                 if not f_found:
@@ -110,10 +110,10 @@ class UserConfig(object, metaclass=Singleton):
                         log.debug(f"\tfound '{_id}' f (name): '{game_object}")
                         f_objects = _config2.get('filter_objects', set())
                         f_objects.add(game_object)
-                        _config2.update({'filter_objects': f_objects})
+                        _config2.reset_motives({'filter_objects': f_objects})
                         f_found = True
             if s_found or f_found:
-                ConfigStore.config2.update({_id: _config2})
+                ConfigStore.config2.reset_motives({_id: _config2})
 
     def _add_interactions_to_config(self):
         interaction_manager = services.get_instance_manager(ResourceType.INTERACTION)
@@ -126,5 +126,5 @@ class UserConfig(object, metaclass=Singleton):
                     for interaction_id in interaction_ids:
                         interaction_instance = interaction_manager.get(interaction_id)
                         __interactions.add(interaction_instance)
-                    _config2.update({_interactions: __interactions})
-                    ConfigStore.config2.update({_id: _config2})
+                    _config2.reset_motives({_interactions: __interactions})
+                    ConfigStore.config2.reset_motives({_id: _config2})
