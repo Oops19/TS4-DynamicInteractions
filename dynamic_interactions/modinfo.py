@@ -34,12 +34,14 @@ class ModInfo(CommonModInfo):
 
     @property
     def _version(self) -> str:
-        return '1.0.5'
+        return '1.0.6'
 
 
 """
 TODO
     Add support for venue and region
+v1.0.6
+    Fix VanillaRegions / TS4Lib 0.4+
 v1.0.5
     Fix cheat commands
 v1.0.4

@@ -1,5 +1,5 @@
-DynamicInteractions v1.0.5 for The Sims 4 v1.120.117 and S4CL v3.17
-Created on 2025-12-14
-v1.0.5
-    Fix cheat commands
+DynamicInteractions v1.0.6 for The Sims 4 v1.120.117 and S4CL v3.17
+Created on 2025-12-20
+v1.0.6
+    Fix VanillaRegions / TS4Lib 0.4+
 
